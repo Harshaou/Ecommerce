@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {ProductConsumer} from '../context'
 
+
 class Product extends Component {
 
     render() {
@@ -11,14 +12,18 @@ class Product extends Component {
         return (
             <ProductWrapper className='col-9 mx-auto  col-md-6 col-lg-3 my-3'>
                 <div className="card">
-                    <div onClick={() => console.log('clicked')} className="img-container p-5">
-                        <Link to='/details'>
-                            <img className='card-img-top' src={img} alt="product"/>
-                        </Link>
-                        <button className='cart-btn' disabled={inCart? true: false }>
-                          {inCart? ( <p className='text-capitalize mb-0' disabled>inCart</p> ) : ( <i className='fas fa-cart-plus'></i> ) }
-                        </button>
-                    </div>
+                  <ProductConsumer >
+                {(value) => (
+                  <div onClick={() => value.handleDetail(id)} className="img-container p-5">
+                  <Link to='/details'>
+                      <img className='card-img-top' src={img} alt="product"/>
+                  </Link>
+                  <button className='cart-btn' disabled={inCart? true: false }>
+                    {inCart? ( <p className='text-capitalize mb-0' disabled>inCart</p> ) : ( <i className='fas fa-cart-plus'></i> ) }
+                  </button>
+                  </div>
+                )}
+                  </ProductConsumer>
                     <div className="card-footer d-flex justify-content-between">
                       <p className="align-self-center mb-0">
                         {title}
