@@ -18,8 +18,12 @@ class Product extends Component {
                   <Link to='/details'>
                       <img className='card-img-top' src={img} alt="product"/>
                   </Link>
-                  <button onClick={() => value.addToCart(id)} className='cart-btn' disabled={inCart? true: false }>
-                    {inCart? ( <p className='text-capitalize mb-0' disabled>inCart</p> ) : ( <i className='fas fa-cart-plus'></i> ) }
+                  
+                  <button
+                    className="cart-btn"
+                    disabled={inCart ? true : false}
+                    onClick={() => { value.addToCart(id); value.openModal(id)}}>
+                    {inCart ? ( <p className="text-capitalize mb-0" disabled> in cart </p> ) : ( <i className="fas fa-cart-plus" /> )}
                   </button>
                   </div>
                 )}

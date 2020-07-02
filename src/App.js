@@ -5,6 +5,7 @@ import ProductList from './components/ProductList'
 import Cart from './components/Cart'
 import Details from './components/Details'
 import Default from './components/Default' 
+import Model from './components/Model';
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                 <Route path='/Cart' component={Cart} />
                 <Route component={Default} />
                 </Switch>
+                <Model />
                 
 
                 

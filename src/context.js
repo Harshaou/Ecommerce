@@ -8,7 +8,7 @@ class ProductProvider extends Component {
         products: [],
         detailProduct: detailProduct,
         cart: [],
-        modelOpen: true,
+        modelOpen: false,
         modelProduct: detailProduct
     }
 
@@ -34,7 +34,6 @@ class ProductProvider extends Component {
     handleDetail = (id) => {
         const product = this.getItem(id)
         this.setState({detailProduct: product })
-        console.log(this.state.detailProduct)
     }
 
     addToCart = (id) => {
@@ -45,12 +44,12 @@ class ProductProvider extends Component {
         product.count = 1
         const price = product.price
         product.total = price
-        this.setState({products: tempProducts, cart: [...this.state.cart, product]}, () => console.log(this.state))
+        this.setState({products: tempProducts, cart: [...this.state.cart, product]})
     }
 
     openModal = (id) => {
         const product = this.getItem(id)
-        this.setState({modelProduct: product, openModal: true})
+        this.setState({modelProduct: product, modelOpen: true})
     }
 
     closeModel = () => {
