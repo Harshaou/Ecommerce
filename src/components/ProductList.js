@@ -11,7 +11,7 @@ class ProductList extends Component {
             <div className='py-5'>
                 <div className="container">
                     <div className="row">
-                        <Title name='Our' title='products' />
+                        <Title name='Our' title='Products' />
                     </div>
                     <div className="row">
                         <ProductConsumer>

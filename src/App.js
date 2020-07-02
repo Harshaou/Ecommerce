@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import ProductList from './components/ProductList'
-import Cart from './components/Cart'
+import Cart from './components/cart'
 import Details from './components/Details'
 import Default from './components/Default' 
 import Model from './components/Model';
