@@ -20,8 +20,17 @@ const CardItem = ({value, item}) => {
             <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
                 <div className="d-flex justify-content-center">
                     <span onClick={() => decrement(id)} className='btn btn-black mx-1'>-</span>
-
+                    <span className='btn btn-black mx-1'>{count}</span>
+                    <span onClick={() => increment(id)} className='btn btn-black mx-1'>+</span>
                 </div>
+            </div>
+            <div className="col-10 mx-auto col-lg-2">
+            <div onClick={() => removeItem(id)} className="cart-icon">
+            <i className="fas fa-trash"></i>
+            </div>
+            </div>
+            <div className="col-10 mx-auto col-lg-2">
+            <strong>item total : ${total}</strong>
             </div>
         </div>
     );

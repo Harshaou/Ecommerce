@@ -64,7 +64,7 @@ class ProductProvider extends Component {
     }
 
     decrement = () => {
-        console.log('dec');
+        this.setState({cartTotal: this.state.cartTotal -1 }, () => console.log(this.state.cartTotal))
     } 
 
     removeItem = () => {
