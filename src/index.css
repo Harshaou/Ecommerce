@@ -26,3 +26,17 @@ body{
 .text-bright{
   color: var(--lighBlue) !important ;
 }
+
+.btn-black{
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover{
+  background: var(--mainDark) !important;
+  color: var(--mainWhite);
+}
