@@ -4,6 +4,7 @@ import CartColumn from './CartColumn';
 import EmptyCart from './EmptyCart';
 import {ProductConsumer} from '../../context.js'
 import CartList from './CartList';
+import CartTotal from './CartTotal'
 
 
 class Cart extends Component {
@@ -19,6 +20,7 @@ class Cart extends Component {
                                 <Title  name={'Your'} title={'cart'} />
                                 <CartColumn />
                                 <CartList value={value} />
+                                <CartTotal value={value} />
                                 </div>
                             )
                         } else {
