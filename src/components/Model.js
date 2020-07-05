@@ -12,7 +12,7 @@ class Model extends Component {
                     {(value) => {
                         
                         const {modelOpen, closeModel} = value
-                        const {id,title,img, price} = value.detailProduct
+                        const {title,img, price} = value.detailProduct
                         if(!modelOpen){
                             return null
                         } else {

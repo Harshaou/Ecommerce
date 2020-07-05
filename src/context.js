@@ -61,7 +61,7 @@ class ProductProvider extends Component {
 
     increment = (id) => {
         let tempCart = [...this.state.cart]
-        let selectedProduct = tempCart.find(item => item.id == id)
+        let selectedProduct = tempCart.find(item => item.id === id)
         let index = tempCart.indexOf(selectedProduct)
         let product = tempCart[index]
 
@@ -73,7 +73,7 @@ class ProductProvider extends Component {
 
     decrement = (id) => {
         let tempCart = [...this.state.cart]
-        let selectedProduct = tempCart.find(item => item.id == id)
+        let selectedProduct = tempCart.find(item => item.id === id)
         let index = tempCart.indexOf(selectedProduct)
         let product = tempCart[index]
 
